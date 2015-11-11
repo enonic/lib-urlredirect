@@ -7,7 +7,14 @@ function handleGet() {
     var result = portal.getContent();
     var url = result.data.url;
 
-    return {
-        redirect: url
-    };
+    var response = {};
+
+    if (url) {
+        response.redirect = url;
+    }
+    else {
+        response.body = 'No URL configured.'
+    }
+
+    return response;
 }
