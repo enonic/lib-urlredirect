@@ -1,6 +1,6 @@
 # lib-url
 
-This library contains a URL content type and a page template (controller) for redirecting to this URL.
+This library contains a URL content type and a page template (controller) for redirecting to a given URL.
 
 ## Compatibility
 
