@@ -1,9 +1,10 @@
-var portal = require('/lib/xp/portal');
+var libs = {
+    portal: require('/lib/xp/portal')
+};
 
 exports.get = function(req) {
-    var result = portal.getContent();
+    var result = libs.portal.getContent();
     var url = result.data.url;
-
     var response = {};
 
 	 // Disable the redirect when inside Content Studio
