@@ -18,7 +18,7 @@ Set up a simple page template for showing content based on the URL content type.
 
 ```
 dependencies {
-    include "com.enonic.lib:url:1.0.0"
+    include "com.enonic.lib:urlredirect:1.0.0"
 }
 
 repositories {
