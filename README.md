@@ -12,7 +12,7 @@ The compatibility matrix shows official (tested) version support. The library mi
 
 ## Configuration
 
-Set up a simple page template for showing content based on the URL content type. The page template should use the "URL redirect" template and should support the "URL" content type.
+Set up a simple page template for showing content based on the URL content type. The page template should use the "URL redirect" page controller and should support the "URL" content type.
 
 ### Gradle build dependency
 
