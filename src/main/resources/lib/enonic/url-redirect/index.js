@@ -17,17 +17,22 @@ exports.get = function(req) {
 		response.contentType = 'text/html';
         var body = '<html><head><title>Disabled</title>' +
 						'<style>' +
-						'html,body {min-height:100%;}' +
+						'html,body { min-height:100%; }' +
 						'main {' +
 						'	height: 100%;' +
 						'	display: flex;' +
 						'	text-align: center;' +
-						'	align-items: center;' +
+						'	flex-flow: row wrap;' +
+						'	align-content: center;' +
 						'}' +
 						'p {' +
 						'	font-size: 21px;' +
 						'	font-family: "Open Sans", sans-serif;' +
 						'	color: lightgray;' +
+						'	width: 100%;' +
+						'}' +
+						'a {' +
+						'	opacity: 0.5;' +
 						'}' +
 						'</style>' +
 						'</head><body>' +
