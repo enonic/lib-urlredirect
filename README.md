@@ -19,6 +19,7 @@ Just start creating contents of the type "URL" and visit it to be redirected to 
 
 ```
 plugins {
+	id 'com.enonic.xp.app' version '1.0.13' // Use the latest of this plugin! 1.0.11 will not install the content type.
     id 'com.enonic.lib:urlredirect' version '2.0.0'
 }
 ```
