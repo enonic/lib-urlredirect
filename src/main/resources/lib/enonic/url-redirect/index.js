@@ -6,11 +6,15 @@ exports.get = function(req) {
     var result = libs.portal.getContent();
     var url = result.data.url || false;
 	var disabled = !(req.mode === 'edit' || req.mode === 'preview'); // Disable the redirect when inside Content Studio
-    var response = {};
+    var response = {
+		postProcess: false,
+		applyFilters: false
+	};
 
     if (url) {
         response.redirect = url;
     } else {
+		response.contentType = 'text/html';
         response.body = '<html><head><title>Disabled</title>' +
 						'<style>' +
 						'html,body {min-height:100%;}' +
