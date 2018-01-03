@@ -18,24 +18,26 @@ exports.get = function(req) {
         var body = '<html><head><title>Disabled</title>' +
 						'<style>' +
 						'html,body {min-height:100%;}' +
-						'p {' +
-						'	font-size: 21px;' +
-						'	font-family: "Open Sans", sans-serif;' +
-						'	color: lightgray;' +
+						'main {' +
 						'	height: 100%;' +
 						'	display: flex;' +
 						'	text-align: center;' +
 						'	align-items: center;' +
 						'}' +
+						'p {' +
+						'	font-size: 21px;' +
+						'	font-family: "Open Sans", sans-serif;' +
+						'	color: lightgray;' +
+						'}' +
 						'</style>' +
 						'</head><body>' +
-						'<p>';
+						'<main><p>';
 		if (url) {
 			body += 'Redirect created, but has been disabled inside Content Studio.</p><p>Configured redirect: <a href="' + url + '" target="_blank">' + url + '</a>';
 		} else {
 			body += 'No URL configured (edit this content in Content Studio).';
 		}
-		body += '</p>';
+		body += '</p></main>';
 		body += '</body></html>';
 		response.body = body;
     }
