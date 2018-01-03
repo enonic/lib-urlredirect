@@ -15,8 +15,20 @@ exports.get = function(req) {
     if (url) {
         response.redirect = url;
     } else {
-        response.body = '<html><head><title>Disabled</title></head><body>' +
-						'No URL configured (redirects are always disabled when inside Content Studio).' +
+        response.body = '<html><head><title>Disabled</title>' +
+						'<style>' +
+						'html,body {min-height:100%;}' +
+						'p {' +
+						'	font-size: 21px;' +
+						'	font-family: "Open Sans", sans-serif;' +
+						'	color: lightgray;' +
+						'	height: 100%;' +
+						'	display: flex;' +
+						'	text-align: center;' +
+						'}' +
+						'</style>' +
+						'</head><body>' +
+						'<p>No URL configured (redirects are always disabled when inside Content Studio).</p>' +
 						'</body></html>';
     }
 
