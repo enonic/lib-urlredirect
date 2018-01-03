@@ -1,0 +1,7 @@
+<site>
+  <mappings>
+    <mapping controller="/lib/enonic/url-redirect/index.js">
+      <match>type:'url'</match>
+    </mapping>
+  </mappings>
+</site>

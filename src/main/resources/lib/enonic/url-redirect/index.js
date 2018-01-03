@@ -15,7 +15,9 @@ exports.get = function(req) {
     if (url) {
         response.redirect = url;
     } else {
-        response.body = 'No URL configured (redirects are always disabled when inside Content Studio).';
+        response.body = '<html><head><title>Disabled</title></head><body>' +
+						'No URL configured (redirects are always disabled when inside Content Studio).' +
+						'</body></html>';
     }
 
     return response;
