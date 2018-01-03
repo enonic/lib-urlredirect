@@ -28,11 +28,11 @@ exports.get = function(req) {
 						'p {' +
 						'	font-size: 21px;' +
 						'	font-family: "Open Sans", sans-serif;' +
-						'	color: lightgray;' +
+						'	color: #9e9e9e;' +
 						'	width: 100%;' +
 						'}' +
 						'a {' +
-						'	opacity: 0.5;' +
+						'	opacity: 0.6;' +
 						'}' +
 						'</style>' +
 						'</head><body>' +
