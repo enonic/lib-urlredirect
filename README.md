@@ -15,7 +15,7 @@ The compatibility matrix shows official (tested) version support.
 
 With 2.x of this library we improved the usability of the library, but this also meant we had to break something.
 
-To upgrade, just make sure you delete any URL template you have set up for 1.x **first**, the page controller it uses is removed from the library in 2.x and it uses a controller mapping instead to handle traffic routing.
+To upgrade, just make sure you delete any URL template you have set up for 1.x **first**, the page controller it uses is removed from the library in 2.x.
 
 After this, you can add the new library to your `build.gradle` and build the app again. Existing URLs added from 1.x should work as before, just without the need of a template.
 
