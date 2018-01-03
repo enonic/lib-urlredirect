@@ -17,9 +17,23 @@ With 2.x of this library we improved the usability of the library, but this also
 
 To upgrade, just make sure you delete any URL template you have set up for 1.x **first**, the page controller it uses is removed from the library in 2.x.
 
-After this, you can add the new library to your `build.gradle` and build the app again. Existing URLs added from 1.x should work as before, just without the need of a template.
+After this, you can add the new library to your `build.gradle` and build the app again.
 
-## Configuration and Usage
+To get rendering to work, see under "Configuration".
+
+## Configuration
+
+From 2.x, you must add the following `Controller Mapping` to your main app's `site.xml` file. See the XP documentation for additional information on [Controller Mappings](http://xp.readthedocs.io/en/6.12/developer/site/mappings/index.html).
+
+Add this code after the closing of the `<config>`-node:
+
+```
+<mapping controller="/lib/enonic/url-redirect/index.js" order="20">
+  <match>type:'url'</match>
+</mapping>
+```
+
+## How to use
 
 Just start creating contents of the type "URL" and visit it to be redirected to the defined URL.
 
