@@ -22,9 +22,11 @@ Add this code after the closing of the `<config>`-node, but within a `<mappings>
 
 ```
 <mapping controller="/lib/enonic/url-redirect/index.js">
-  <match>type:'url'</match>
+  <match>type:'[my.app.name]:url'</match>
 </mapping>
 ```
+
+Make sure you change `[my.app.name]` into the name of your app!
 
 ## How to use
 
