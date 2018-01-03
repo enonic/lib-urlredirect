@@ -16,9 +16,9 @@ To get rendering to work, see under "Configuration".
 
 ## Configuration
 
-From *2.x*, you must add the following `Controller Mapping` to your main app's `site.xml` file. See the XP documentation for additional information on [Controller Mappings](http://xp.readthedocs.io/en/6.12/developer/site/mappings/index.html).
+From *2.x*, you must add the following [Controller Mapping](http://xp.readthedocs.io/en/6.12/developer/site/mappings/index.html) to your main app's `site.xml` file.
 
-Add this code after the closing of the `<config>`-node, but within a `<mappings>`-node (or inside an existing one):
+This is the code, add it after the closing of the `<config>`-node, within a `<mappings>`-node (create one or use an existing one):
 
 ```
 <mapping controller="/lib/enonic/url-redirect/index.js">
