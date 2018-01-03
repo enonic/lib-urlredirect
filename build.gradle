@@ -1,20 +1,13 @@
 plugins {
-	id 'com.enonic.xp.app' version '1.0.15'
+	id 'java'
 	id 'com.enonic.defaults' version '1.0.3'
 }
 
-app {
-	systemVersion = "${xpVersion}"
-}
-
 dependencies {
-	compile "com.enonic.xp:core-api:${xpVersion}"
-	compile "com.enonic.xp:portal-api:${xpVersion}"
-	include "com.enonic.xp:lib-portal:${xpVersion}"
+	compile "com.enonic.xp:lib-portal:${xpVersion}"
 }
 
 repositories {
 	mavenLocal()
 	jcenter()
-	xp.enonicRepo()
 }
