@@ -4,13 +4,9 @@ var libs = {
 
 exports.get = function(req) {
     var result = libs.portal.getContent();
-    var url = result.data.url;
+    var url = result.data.url || false;
+	var disabled = !(req.mode === 'edit' || req.mode === 'preview'); // Disable the redirect when inside Content Studio
     var response = {};
-
-	 // Disable the redirect when inside Content Studio
-	 if (req.mode === 'edit' || req.mode === 'preview') {
-		 url = false;
-	 }
 
     if (url) {
         response.redirect = url;
@@ -28,8 +24,14 @@ exports.get = function(req) {
 						'}' +
 						'</style>' +
 						'</head><body>' +
-						'<p>No URL configured (redirects are always disabled when inside Content Studio).</p>' +
-						'</body></html>';
+						'<p>';
+		if (disabled) {
+			response.body += 'Redirect created, but has been disabled inside Content Studio.<br />Configured redirect: <a href="' + url + '" target="_blank">' + url + '</a>';
+		} else {
+			response.body += 'No URL configured (edit this content in Content Studio).';
+		}
+		response.body += '</p>';
+		response.body += '</body></html>';
     }
 
     return response;
