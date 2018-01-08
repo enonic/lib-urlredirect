@@ -40,6 +40,11 @@ plugins {
 }
 ```
 
+**Important note:** Enonic Gradle-plugin `com.enonic.xp.app` need to be version 1.0.15, at least.
+```
+id 'com.enonic.xp.app' version '1.0.15'
+```
+
 ### Gradle - old
 
 ```
