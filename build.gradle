@@ -1,7 +1,7 @@
 plugins {
-	id 'java' // Needed for libs building without xp.apps plugin
-	id 'maven' // Needed for uploadArchives to work locally
-	id 'com.enonic.defaults' version '1.0.3'
+	id 'java'
+	id 'maven-publish'
+	id 'com.enonic.defaults' version '2.0.1'
 }
 
 dependencies {
