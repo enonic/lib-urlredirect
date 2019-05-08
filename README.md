@@ -36,20 +36,15 @@ Just start creating contents of the type "URL" and visit it to be redirected to 
 
 ```
 plugins {
-    id 'com.enonic.lib:urlredirect' version '3.0.0'
+    id 'com.enonic.lib:lib-urlredirect' version '3.0.0'
 }
-```
-
-**Important note:** Enonic Gradle-plugin `com.enonic.xp.app` need to be version 1.0.15, at least.
-```
-id 'com.enonic.xp.app' version '1.0.15'
 ```
 
 ### Gradle - old
 
 ```
 dependencies {
-    include "com.enonic.lib:urlredirect:3.0.0"
+    include "com.enonic.lib:lib-urlredirect:3.0.0"
 }
 
 repositories {

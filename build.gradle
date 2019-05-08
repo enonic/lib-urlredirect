@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'maven-publish'
 	id 'com.enonic.defaults' version '2.0.1'
+	id 'com.enonic.xp.base' version '2.0.0'
 }
 
 dependencies {
@@ -11,4 +12,5 @@ dependencies {
 repositories {
 	mavenLocal()
 	jcenter()
+	xp.enonicRepo()
 }
