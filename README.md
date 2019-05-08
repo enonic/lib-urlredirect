@@ -4,7 +4,7 @@ This library contains a URL content type, with an icon, and a controller that ha
 
 Versions *1.x* of this library is not compatible with versions *2.x*.
 
-## Upgrading from 1.x to 2.x
+## Upgrading from 1.x to 2.x or 3.x
 
 With *2.x* of this library we improved the usability, but this also meant we had to break something.
 
@@ -21,7 +21,7 @@ From *2.x*, you must add the following [Controller Mapping](http://xp.readthedoc
 This is the code, add it after the closing of the `<config>`-node, within a `<mappings>`-node (create one or use an existing one):
 
 ```
-<mapping controller="/lib/enonic/url-redirect/index.js">
+<mapping controller="/lib/urlredirect.js">
   <match>type:'[my.app.name]:url'</match>
 </mapping>
 ```
@@ -36,20 +36,15 @@ Just start creating contents of the type "URL" and visit it to be redirected to 
 
 ```
 plugins {
-    id 'com.enonic.lib:urlredirect' version '2.0.0'
+    id 'com.enonic.lib:lib-urlredirect' version '3.0.0'
 }
-```
-
-**Important note:** Enonic Gradle-plugin `com.enonic.xp.app` need to be version 1.0.15, at least.
-```
-id 'com.enonic.xp.app' version '1.0.15'
 ```
 
 ### Gradle - old
 
 ```
 dependencies {
-    include "com.enonic.lib:urlredirect:2.0.0"
+    include "com.enonic.lib:lib-urlredirect:3.0.0"
 }
 
 repositories {
@@ -63,6 +58,7 @@ repositories {
 
 | Lib version        | XP version |
 | ------------- | ------------- |
+| 3.0.0 | 7.0.0 |
 | 2.0.0 | 6.12.0 |
 | 1.0.0 | 6.2.0 |
 

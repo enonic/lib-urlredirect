@@ -5,7 +5,7 @@ var libs = {
 exports.get = function(req) {
     var result = libs.portal.getContent();
     var url = result.data.url || false;
-	var disabled = (req.mode === 'edit' || req.mode === 'preview'); // Disable the redirect when inside Content Studio
+	var disabled = (req.mode !== 'live'); // Disable the redirect when inside Content Studio
     var response = {
 		applyFilters: false,
 		postProcess: false
