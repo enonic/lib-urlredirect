@@ -6,7 +6,7 @@ plugins {
 }
 
 dependencies {
-	compile "com.enonic.xp:lib-portal:${xpVersion}"
+	implementation "com.enonic.xp:lib-portal:${xpVersion}"
 }
 
 repositories {
