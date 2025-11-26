@@ -14,3 +14,9 @@ repositories {
 	mavenCentral()
 	xp.enonicRepo()
 }
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
