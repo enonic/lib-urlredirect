@@ -2,21 +2,15 @@ plugins {
 	id 'java'
 	id 'maven-publish'
 	id 'com.enonic.defaults' version '2.1.6'
-	id 'com.enonic.xp.base' version '3.6.2'
+	id 'com.enonic.xp.base'
 }
 
 dependencies {
-	implementation "com.enonic.xp:lib-portal:${xpVersion}"
+	implementation xplibs.portal
 }
 
 repositories {
 	mavenLocal()
 	mavenCentral()
 	xp.enonicRepo()
-}
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(11)
-    }
 }
