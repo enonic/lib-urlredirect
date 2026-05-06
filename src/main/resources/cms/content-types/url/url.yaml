@@ -1,0 +1,13 @@
+kind: "ContentType"
+superType: "base:structured"
+title: "URL"
+displayNameExpression: "${url}"
+form:
+  - type: "TextLine"
+    name: "url"
+    label: "URL"
+    helpText: "Include the protocol name (\"https://\", \"http://\", etc) for the\
+      \ URL."
+    occurrences:
+      min: 1
+      max: 1
