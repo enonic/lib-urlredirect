@@ -8,7 +8,7 @@ This library contains a URL content type, with an icon, and a controller that ha
 
     ```groovy
     dependencies {
-       include 'com.enonic.lib:lib-urlredirect:3.0.1'
+       include 'com.enonic.lib:lib-urlredirect:4.0.0'
     }
     ```
 
